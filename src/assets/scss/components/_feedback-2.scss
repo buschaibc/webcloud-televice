@@ -1,0 +1,17 @@
+.feedback-2 {
+	&__pagination {
+		position: static;
+	}
+}
+.feedback-2-container {
+	.swiper-pagination-bullet {
+		border-radius: 1rem;
+		width: 10px;
+		height: 10px;
+		background-color: rgba($primary, 0.75);
+	}
+	.swiper-pagination-bullet-active {
+		width: 1.5rem;
+		background-color: $primary;
+	}
+}

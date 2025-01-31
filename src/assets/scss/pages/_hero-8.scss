@@ -1,0 +1,30 @@
+.hero-8 {
+	padding-top: clamp(9rem, 11.5vw + 1rem, 13.75rem);
+    .hero-img {
+        margin-top: -50px;
+        margin-left: -175px;
+        @media(max-width: 1199px) {
+            margin-top: 0;
+            margin-left: 0;
+        }
+    }
+    .hero-price-card {
+        @media (max-width: 767px) {
+            position: static !important;
+        }
+    }
+    .shape-1 {
+        top: -110px;
+        right: 320px;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url(../img/shape/hero8-bg-shape.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
+    }
+}

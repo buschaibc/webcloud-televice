@@ -1,0 +1,18 @@
+.title-video {
+	position: relative;
+	width: 130px;
+	height: calc(1.5065rem + 3.078vw);
+	border-radius: 3rem;
+	overflow: hidden;
+	@include media-breakpoint-up(xl) {
+		height: 3.75rem;
+	}
+	video {
+		width: 170%;
+		height: 170%;
+		position: absolute;
+		inset: 0;
+		object-fit: cover;
+        transform: translate(-25%, -25%);
+	}
+}

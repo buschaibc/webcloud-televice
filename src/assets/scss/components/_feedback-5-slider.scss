@@ -1,0 +1,77 @@
+.feedback-5-slider {
+	position: relative;
+	isolation: isolate;
+	&--container {
+		position: relative;
+		isolation: isolate;
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			pointer-events: none;
+			z-index: 1;
+			background: linear-gradient(
+				90deg,
+				rgba(9, 9, 17, 1) 2%,
+				rgba(9, 9, 17, 0.3) 42%,
+				rgba(9, 9, 17, 0) 45%,
+				rgba(9, 9, 17, 0.56) 76%,
+				rgba(9, 9, 17, 1) 100%
+			);
+		}
+	}
+	&__item {
+		position: relative;
+		isolation: isolate;
+		margin-top: 36px;
+		margin-bottom: 1rem;
+		&::before {
+			content: "";
+			position: absolute;
+			inset-inline: 1rem;
+			inset-block-start: 0;
+			inset-block-end: -0.5rem;
+			border: 1px solid rgba($border-color, 0.1);
+			border-radius: $border-radius-xl;
+			background-color: #16161d;
+			z-index: -1;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			inset-inline: 2rem;
+			inset-block-start: 0;
+			inset-block-end: -1rem;
+			border: 1px solid rgba($border-color, 0.1);
+			border-radius: $border-radius-xl;
+			background-color: #16161d;
+			z-index: -2;
+		}
+		& > .card {
+			background-color: #16161d;
+		}
+	}
+	&__pagination {
+		position: static;
+	}
+	&__avatar {
+		position: relative;
+		margin-top: -76px;
+	}
+	.swiper-slide-prev {
+		opacity: 0.5;
+	}
+	.swiper-slide-next {
+		opacity: 0.5;
+	}
+	.swiper-pagination-bullet {
+		border-radius: 1rem;
+		width: 10px;
+		height: 10px;
+		background-color: rgba($primary, 0.75);
+	}
+	.swiper-pagination-bullet-active {
+		width: 1.5rem;
+		background-color: $primary;
+	}
+}

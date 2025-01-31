@@ -1,0 +1,7 @@
+.support-card {
+    &:hover {
+        .support-shape {
+            opacity: 1 !important;
+        }
+    }
+}

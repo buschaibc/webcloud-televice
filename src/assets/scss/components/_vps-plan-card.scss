@@ -1,0 +1,8 @@
+.vps-plan-card {
+	&:hover {
+		background-color: $white !important;
+        .text-white {
+            color: $body-color !important;
+        }
+	}
+}

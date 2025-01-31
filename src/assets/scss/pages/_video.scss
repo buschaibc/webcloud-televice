@@ -1,0 +1,12 @@
+.video-area-one {
+    margin-top: -1px;
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: $dark;
+        z-index: -1;
+        pointer-events: none;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 31%);
+    }
+}

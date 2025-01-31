@@ -1,0 +1,29 @@
+.game-tab {
+	position: relative;
+	isolation: isolate;
+	.gt-icon-color {
+		display: none;
+	}
+	&.active {
+		.gt-icon {
+			display: none;
+		}
+		.gt-icon-color {
+			display: block;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: -1px;
+			z-index: 1;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-right: 12px solid transparent;
+			border-left: 12px solid transparent;
+			border-top: 12px solid $gray-900;
+			border-bottom: 0;
+			filter: drop-shadow(0 1px 1px $primary);
+		}
+	}
+}

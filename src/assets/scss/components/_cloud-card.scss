@@ -1,0 +1,35 @@
+.cloud-card {
+	padding: 1.5rem;
+	position: relative;
+	isolation: isolate;
+	border-radius: 0.5rem;
+	background-color: rgba($white, 0.1);
+	border: 1px solid rgba($white, 0.15);
+	color: $white;
+	transition: all 0.3s ease;
+	&:hover {
+		background-color: $white;
+		color: $dark;
+		.cloud-card__title {
+			color: $dark;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: -1px;
+			width: 4px;
+			background-color: $success;
+			border-radius: 0.5rem 0 0 0.5rem;
+			z-index: 1;
+		}
+	}
+	&__title {
+		color: $white;
+		transition: all 0.3s ease;
+	}
+	&::after {
+		transition: all 0.3s ease;
+	}
+}

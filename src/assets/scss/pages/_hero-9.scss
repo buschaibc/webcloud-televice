@@ -1,0 +1,14 @@
+.home-9-hero {
+    background-image: url(../img/shape/hero-9-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    @media(max-width: 991px) {
+        margin-top: 25px;
+    }
+    .text-end {
+        img {
+            margin-top: -85px;
+        }
+    }
+}

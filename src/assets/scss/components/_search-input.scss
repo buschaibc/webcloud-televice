@@ -1,0 +1,18 @@
+.search-input {
+	border: 0;
+    background-color: transparent;
+	&:focus {
+        background-color: transparent;
+        box-shadow: none;
+		outline: none;
+	}
+    &--light {
+        color: $white;
+        &::placeholder {
+            color: rgba($white, .5);
+        }
+        &:focus {
+            color: $white;
+        }
+    }
+}

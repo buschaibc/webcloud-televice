@@ -1,0 +1,314 @@
+// Responsive Padding Top
+.pt-120 {
+	--_pt: 60px;
+	@media (min-width: 992px) {
+		--_pt: 120px;
+	}
+	padding-top: var(--_pt);
+}
+.pt-100 {
+	--_pt: 50px;
+	@media (min-width: 992px) {
+		--_pt: 100px;
+	}
+	padding-top: var(--_pt);
+}
+.pt-80 {
+	--_pt: 40px;
+	@media (min-width: 992px) {
+		--_pt: 80px;
+	}
+	padding-top: var(--_pt);
+}
+.pt-60 {
+	--_pt: 32px;
+	@media (min-width: 992px) {
+		--_pt: 60px;
+	}
+	padding-top: var(--_pt);
+}
+.pt-40 {
+	--_pt: 20px;
+	@media (min-width: 992px) {
+		--_pt: 40px;
+	}
+	padding-top: var(--_pt);
+}
+.pt-32 {
+	--_pt: 16px;
+	@media (min-width: 992px) {
+		--_pt: 32px;
+	}
+	padding-top: var(--_pt);
+}
+
+// Responsive Padding Bottom
+.pb-120 {
+	--_pb: 60px;
+	@media (min-width: 992px) {
+		--_pb: 120px;
+	}
+	padding-bottom: var(--_pb);
+}
+.pb-100 {
+	--_pb: 50px;
+	@media (min-width: 992px) {
+		--_pb: 100px;
+	}
+	padding-bottom: var(--_pb);
+}
+.pb-80 {
+	--_pb: 40px;
+	@media (min-width: 992px) {
+		--_pb: 80px;
+	}
+	padding-bottom: var(--_pb);
+}
+.pb-60 {
+	--_pb: 32px;
+	@media (min-width: 992px) {
+		--_pb: 60px;
+	}
+	padding-bottom: var(--_pb);
+}
+.pb-40 {
+	--_pb: 20px;
+	@media (min-width: 992px) {
+		--_pb: 40px;
+	}
+	padding-bottom: var(--_pb);
+}
+.pb-32 {
+	--_pb: 16px;
+	@media (min-width: 992px) {
+		--_pb: 32px;
+	}
+	padding-bottom: var(--_pb);
+}
+
+// Size
+@each $size, $value in $spacers {
+	// Width
+	.w-#{$size} {
+		width: $value;
+	}
+
+	// Height
+	.h-#{$size} {
+		height: $value;
+	}
+	@each $screen, $screenSize in $grid-breakpoints {
+		.w-#{$screen}-#{$size} {
+			@media (min-width: $screenSize) {
+				width: $value;
+			}
+		}
+	}
+	@each $screen, $screenSize in $grid-breakpoints {
+		.h-#{$screen}-#{$size} {
+			@media (min-width: $screenSize) {
+				height: $value;
+			}
+		}
+	}
+}
+
+.w-max-con {
+	width: max-content;
+}
+
+// Opacity
+.bg-opacity-5 {
+	--bs-bg-opacity: 0.05;
+}
+.bg-opacity-10 {
+	--bs-bg-opacity: 0.1;
+}
+
+//Transition
+.transition {
+	transition: $transition-base;
+}
+
+// hover
+.hover\:text-primary:hover {
+	color: $primary !important;
+}
+.hover\:text-white:hover {
+	color: $white !important;
+}
+.hover\:text-dark:hover {
+	color: $dark !important;
+}
+
+.hover\:bg-primary:hover {
+	background-color: $primary !important;
+}
+.hover\:bg-success:hover {
+	background-color: $success !important;
+}
+.hover\:bg-dark:hover {
+	background-color: $dark !important;
+}
+
+.hover\:border-primary:hover {
+	border-color: $primary !important;
+}
+.hover\:border-success:hover {
+	border-color: $success !important;
+}
+
+.hover\:border-dark:hover {
+	border-color: $dark !important;
+}
+
+// Color
+.text-heading {
+	color: $headings-color;
+}
+.fw-900 {
+	font-weight: 900;
+}
+
+// Background
+.bg-gray-900 {
+	background-color: $gray-900;
+}
+.bg-gradient-1 {
+	background-image: linear-gradient(253deg, #0a00e9 5.74%, #00165b 102.24%);
+}
+
+// Shadow
+.hover-shadow {
+	&:hover {
+		box-shadow: $box-shadow;
+	}
+}
+
+.form-control {
+	&:focus {
+		outline: none;
+		box-shadow: none;
+		border-color: $border-color;
+	}
+}
+.form-select {
+	&:focus {
+		outline: none;
+		box-shadow: none;
+		border-color: $border-color;
+	}
+}
+.position-unset {
+	position: unset;
+}
+// Inititally Hide Yearly Price
+.yearly-price {
+	display: none;
+}
+.yearly-price-x {
+	display: none;
+}
+
+.place-content-center {
+	place-content: center;
+}
+
+// Dodge Effect
+.blend-mode-dodge {
+	mix-blend-mode: color-dodge;
+}
+
+// SSL Provider
+.ssl-provider-area {
+	margin-top: -175px;
+	@media (max-width: 1399px) {
+		margin-top: -145px;
+	}
+	@media (max-width: 1199px) {
+		margin-top: -80px;
+	}
+}
+
+// Premium  Network
+.data-boosting {
+	&::after {
+		position: absolute;
+		content: "";
+		inset: 0;
+		background-image: url(../img/shape/data-boost-bg.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		z-index: -1;
+	}
+}
+
+.game-cta-wrapper {
+	background-image: url(../img/shape/game-cta-bg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.game-faq {
+	.accordion-item {
+		background-color: rgba($white, 0.05);
+		border: 0 !important;
+	}
+}
+
+// Home 8
+.hsot-img-style-8 {
+    margin-bottom: -80px;
+	@media(max-width: 1199px) {
+		margin-bottom: 0;
+	}
+}
+
+.price-8 {
+	padding-top: 170px;	
+	@media(max-width: 1399px) {
+		padding-top: 100px;
+	}
+	@media(max-width: 767px) {
+		padding-top: 60px;
+	}
+}
+
+.tab-nav-8 {
+	.nav-link.active {
+		background: linear-gradient(262.24deg, #7154C6 9.78%, #301C70 91.63%);
+		color: $white !important;
+	}
+}
+
+.price-card-8 {
+	&:hover {
+		background: linear-gradient(262.24deg, #7154C6 9.78%, #301C70 91.63%);
+		color: $white !important;
+		h3, h6, .text-black {
+			color: $white !important;
+		}
+		.btn {
+			background: $warning;
+		}
+	}
+}
+
+// Home 9
+.tab-nav-9 {
+	.nav-link.active {
+		background: $dark;
+		color: $white !important;
+	}
+}
+
+.support-22 {
+	a {
+		text-decoration: none;
+		&:hover {
+			color: $warning !important;
+		}
+	}
+}

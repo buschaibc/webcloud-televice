@@ -1,0 +1,92 @@
+.inner-sub-menu {
+	@include media-breakpoint-up(lg) {
+		position: relative;
+		isolation: isolate;
+		&:hover {
+			.contain-sub-1__link {
+				color: $primary;
+			}
+			.inner-sub-menu__list {
+				visibility: visible;
+				opacity: 1;
+				pointer-events: unset;
+			}
+		}
+	}
+	&__list {
+		padding: 0.75rem 1rem;
+		display: none;
+		border-radius: $border-radius-lg;
+		background-color: var(--bs-body-bg);
+		max-height: 250px;
+		overflow-y: auto;
+		scrollbar-color: transparent transparent;
+		scrollbar-width: none;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		@include media-breakpoint-up(md) {
+			max-height: 350px;
+		}
+		@include media-breakpoint-up(lg) {
+			width: 200px;
+			max-height: none;
+			display: block;
+			padding-inline: 0;
+			position: absolute;
+			top: 0;
+			left: 100%;
+			border-radius: $border-radius-sm;
+			visibility: hidden;
+			opacity: 0;
+			pointer-events: none;
+			transition: $transition-base;
+		}
+        &-item {
+            &:hover {
+                .inner-sub-menu__link {
+                    background-color: var(--bs-primary-bg-subtle);
+                    color: var(--bs-primary-text-emphasis);
+                }
+            }
+        }
+	}
+	&__link {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 0.25rem;
+		position: relative;
+		isolation: isolate;
+		padding: 0.25rem 1rem;
+		transition: $transition-base;
+	}
+	.contain-sub-1__link {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 0.25rem;
+		position: relative;
+		isolation: isolate;
+		padding: 0.25rem 0.5rem;
+		transition: $transition-base;
+		@include media-breakpoint-up(lg) {
+			padding: 0.75rem;
+		}
+		&::after {
+			content: "\f107";
+			display: inline-block;
+			align-self: center;
+			font-family: "Line Awesome Free";
+			font-weight: 900;
+			font-size: $font-size-xs;
+			line-height: 1;
+			font-variant: normal;
+			text-rendering: auto;
+			color: inherit;
+			@include media-breakpoint-up(lg) {
+				content: "\f105";
+			}
+		}
+	}
+}

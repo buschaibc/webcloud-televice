@@ -1,0 +1,22 @@
+.ecommerce-pricing {
+	position: relative;
+	isolation: isolate;
+	&::after {
+		content: "";
+		height: 500px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: $dark;
+		z-index: -1;
+		@include media-breakpoint-up(xl) {
+			-webkit-mask-image: url(../img/shape/brand-section-curve-bg.png);
+			mask-image: url(../img/shape/brand-section-curve-bg.png);
+			mask-size: 100% 100%;
+			-webkit-mask-repeat: no-repeat;
+			mask-repeat: no-repeat;
+			mask-position: center;
+		}
+	}
+}

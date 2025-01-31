@@ -1,0 +1,24 @@
+.hero-4 {
+    padding-top: clamp(9rem, 11.5vw + 1rem, 11rem);
+	padding-bottom: clamp(3.75rem, 6.3vw + 1rem, 7.5rem);
+    &::after {
+        content: '';
+        position: absolute;
+        inset-block: 0;
+        inset-inline-start: 50%;
+        inset-inline-end: 0;
+        z-index: -1;
+        pointer-events: none;
+        background-image: url(../img/shape/hero-4-shape-1.png);
+        background-size: contain;
+        background-position: right center;
+        background-repeat: no-repeat;
+    }
+    .vertical-social-media {
+		@include media-breakpoint-up(xl) {
+			top: 50%;
+			left: 2rem;
+			transform: translateY(-50%);
+		}
+	}
+}

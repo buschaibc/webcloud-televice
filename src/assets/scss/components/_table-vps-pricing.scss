@@ -1,0 +1,63 @@
+.table-vps-pricing {
+	border-collapse: separate;
+	border-spacing: 0 1rem;
+	margin-bottom: 0;
+	& > :not(caption) > * > * {
+		padding: 1.5rem;
+		vertical-align: middle;
+	}
+	tr {
+		th {
+			white-space: nowrap;
+			&:first-child {
+				border-start-start-radius: 0.35rem;
+				border-end-start-radius: 0.35rem;
+			}
+			&:last-child {
+				border-start-end-radius: 0.35rem;
+				border-end-end-radius: 0.35rem;
+			}
+		}
+		td {
+			white-space: nowrap;
+			&:first-child {
+				border-start-start-radius: 0.35rem;
+				border-end-start-radius: 0.35rem;
+			}
+			&:last-child {
+				border-start-end-radius: 0.35rem;
+				border-end-end-radius: 0.35rem;
+			}
+		}
+	}
+	&--dark {
+		& > :not(caption) > * > * {
+			--bs-table-color: #fff;
+			background-color: rgba(255, 255, 255, 0.025);
+			border-color: rgba(var(--bs-light-rgb), 0.15);
+			border-top-width: 1px;
+		}
+		tr {
+			th {
+				&:first-child {
+					border-left: 1px solid rgba(var(--bs-light-rgb), 0.15);
+				}
+				&:last-child {
+					border-right: 1px solid rgba(var(--bs-light-rgb), 0.15);
+				}
+			}
+			td {
+				&:first-child {
+					border-left: 1px solid rgba(var(--bs-light-rgb), 0.15);
+				}
+				&:last-child {
+					border-right: 1px solid rgba(var(--bs-light-rgb), 0.15);
+				}
+			}
+		}
+		&.table-hover > tbody > tr:hover > * {
+			--bs-table-color-state: #fff;
+			--bs-table-bg-state: rgba(255, 255, 255, 0.05);
+		}
+	}
+}

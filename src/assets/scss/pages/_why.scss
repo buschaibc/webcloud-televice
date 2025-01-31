@@ -1,0 +1,86 @@
+.why-area-one {
+	&::after {
+		position: absolute;
+		content: "";
+		inset: 0;
+		background-image: url(../img/shape/why-bg-overlay.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		z-index: -1;
+	}
+}
+
+.why-card {
+	background-color: rgba($white, 0.05);
+	backdrop-filter: blur(5px);
+	img {
+		&.dark {
+			display: none;
+		}
+	}
+	&:hover {
+		background-color: $white;
+		img {
+			display: none;
+			&.dark {
+				display: block;
+			}
+		}
+		h6 {
+			color: $headings-color !important;
+		}
+		p {
+			color: $body-color !important;
+		}
+	}
+}
+
+.why-service-item {
+	@include media-breakpoint-up(lg) {
+		&::after {
+			position: absolute;
+			content: "";
+			height: 48px;
+			width: 2px;
+			background-color: $primary;
+			top: 25px;
+			right: 0;
+			opacity: 0.3;
+			@media (max-width: 767px) {
+				display: none;
+			}
+		}
+	}
+	&.last {
+		&::after {
+			display: none;
+		}
+	}
+}
+
+
+// Home 5
+.pluse.why-pluse {
+	border: 0;
+	width: auto;
+	height: auto;
+	opacity: 1;
+	&::after {
+		display: none;
+	}
+}
+
+.accordion.accordion-home-5 {
+	.accordion-item {
+		border: 1px solid rgba($dark, 0.15) !important;
+		.accordion-header {
+			button[aria-expanded="true"] {
+				span {
+					color: $primary !important;
+				}
+			}
+		}
+	}
+}
+

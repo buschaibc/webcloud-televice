@@ -1,0 +1,96 @@
+.nav-tab {
+	&-list {
+		gap: 1rem;
+
+		.nav-item {
+			width: 100%;
+
+			@include media-breakpoint-up(sm) {
+				width: calc(50% - 0.5rem);
+			}
+
+			@include media-breakpoint-up(md) {
+				width: calc(33.33% - 0.67rem);
+			}
+
+			@include media-breakpoint-up(lg) {
+				width: calc(25% - 0.75rem);
+			}
+		}
+	}
+
+	&__btn {
+		--bs-nav-link-padding-y: 0.75rem;
+		width: 100%;
+		border: 1px solid $border-color;
+		text-align: start;
+
+		&.active {
+			.nav-tab__line {
+				background-color: $white;
+			}
+
+			.nav-tab__subtitle {
+				color: $white !important;
+			}
+
+			.nav-tab__title {
+				color: $white;
+			}
+		}
+	}
+
+	&__line {
+		display: inline-block;
+		width: 24px;
+		height: 2px;
+		background-color: $primary;
+	}
+
+	&__card {
+		text-align: start;
+		border-radius: 8px !important;
+
+		&-subtitle {
+			color: $body-color;
+		}
+
+		&-title {
+			font-size: 18px;
+			font-weight: 700;
+		}
+
+		&-details {
+			font-size: 14px;
+			color: $body-color;
+		}
+
+		&.active {
+			position: relative;
+			isolation: isolate;
+			background-color: $white !important;
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0.75rem;
+				bottom: 0.75rem;
+				left: 0;
+				width: 2px;
+				background-color: $primary;
+			}
+
+			.nav-tab__card-title {
+				color: $primary !important;
+			}
+		}
+	}
+}
+
+// Home 8
+.map-8-tab {
+	.partner-tab-nev.active {
+		color: $warning !important;
+		border-bottom: 2px solid $warning !important;
+	}
+}

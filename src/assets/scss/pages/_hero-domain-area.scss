@@ -1,0 +1,28 @@
+.hero-domain-area {
+	padding-top: clamp(9rem, 11.5vw + 1rem, 11rem);
+	&::after {
+		position: absolute;
+		content: "";
+		inset: 0;
+		background-image: url(../img/shape/hero-6-bg-overlay.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		z-index: -1;
+	}
+}
+
+.hero-6-shape-1 {
+	left: -230px;
+	bottom: 65px;
+}
+
+.hero-6-shape-2 {
+	bottom: -70px;
+	right: -120px;
+}
+
+.hero-6-shape-3 {
+	top: 40px;
+	right: -100px;
+}

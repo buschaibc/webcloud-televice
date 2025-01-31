@@ -1,0 +1,11 @@
+.feedback-slider-1 {
+    &__dot {
+        .swiper-pagination-bullet {
+            background-color: $primary;
+            border-radius: 1rem;
+        }
+        .swiper-pagination-bullet-active {
+            width: 18px;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.feedback-navs {
+	top: -165px;
+}
+
+.feedback-button-next {
+	position: absolute;
+	right: 0px;
+	@include media-breakpoint-up(md) {
+		right: -15px;
+	}
+	@include media-breakpoint-up(xxl) {
+		right: -20px;
+	}
+	&:hover {
+		background-color: $primary !important;
+		color: $white !important;
+	}
+}
+
+.feedback-button-prev {
+	position: absolute;
+	left: 0px;
+	@include media-breakpoint-up(md) {
+		left: -15px;
+	}
+	@include media-breakpoint-up(xxl) {
+		left: -20px;
+	}
+	&:hover {
+		background-color: $primary !important;
+		color: $white !important;
+	}
+}
+
+// Feedback Two
+.feedback-2-area {
+	&::after {
+		position: absolute;
+		content: "";
+		inset: 0;
+		background-image: url(../img/shape/feedback-2-bg-overlay.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		z-index: -1;
+		opacity: 0.1;
+	}
+	.feedback-button-prev {
+		left: 55px;
+	}
+	.feedback-button-next {
+		right: 55px;
+	}
+}

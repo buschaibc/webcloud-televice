@@ -1,0 +1,34 @@
+.cta-3 {
+	position: relative;
+	isolation: isolate;
+	&::before {
+		@include media-breakpoint-up(xl) {
+			content: "";
+			position: absolute;
+			inset-block: 0;
+			left: 0;
+			right: 50%;
+			z-index: -1;
+			pointer-events: none;
+			background-image: url(../img/shape/cta-3-shape-left.png);
+			background-size: contain;
+			background-position: left center;
+			background-repeat: no-repeat;
+		}
+	}
+	&::after {
+		@include media-breakpoint-up(xl) {
+			content: "";
+			position: absolute;
+			inset-block: 0;
+			left: 50%;
+			right: 0;
+			z-index: -1;
+			pointer-events: none;
+			background-image: url(../img/shape/cta-3-shape-right.png);
+			background-size: contain;
+			background-position: right center;
+			background-repeat: no-repeat;
+		}
+	}
+}

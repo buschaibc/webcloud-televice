@@ -1,0 +1,36 @@
+.pluse {
+  width: 278px;
+  height: 278px;
+  animation: pulse 2s infinite;
+  border: 1px solid $body-color;
+  border-radius: 50%;
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  opacity: .2;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    border: 1px solid $body-color;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

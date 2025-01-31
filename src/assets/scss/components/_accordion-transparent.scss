@@ -1,0 +1,13 @@
+.accordion-transparent {
+	--bs-accordion-bg: transparent;
+	--bs-accordion-color: #{rgba($white, 0.75)};
+	--bs-accordion-border-color: #{rgba($white, 0)};
+	--bs-accordion-btn-color: #{$white};
+	.accordion-body {
+		border-radius: 0.25rem;
+		background-color: rgba($white, 0.1);
+	}
+	.accordion-item + .accordion-item {
+		border-top: 1px solid rgba($white, 0.1) !important;
+	}
+}

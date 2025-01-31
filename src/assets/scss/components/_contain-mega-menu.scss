@@ -1,0 +1,100 @@
+.contain-mega-menu {
+	&:hover {
+		.contain-mega-menu__content {
+			top: 100%;
+			visibility: visible;
+			opacity: 1;
+			pointer-events: unset;
+		}
+		& > .nav-link {
+			color: $primary;
+		}
+	}
+	&__content {
+		display: none;
+		background-color: var(--bs-body-bg);
+		max-height: 250px;
+		overflow-y: auto;
+		scrollbar-color: transparent transparent;
+		scrollbar-width: none;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		@include media-breakpoint-up(md) {
+			max-height: 350px;
+		}
+		@include media-breakpoint-up(lg) {
+			max-height: 650px;
+			display: block;
+			position: absolute;
+			top: calc(100% + 1rem);
+			left: 0;
+			right: 0;
+			visibility: hidden;
+			opacity: 0;
+			pointer-events: none;
+			box-shadow: $box-shadow-sm;
+			transition: $transition-base;
+		}
+		@include media-breakpoint-up(xl) {
+			max-height: none;
+		}
+	}
+	&__list {
+		border-radius: $border-radius-lg;
+		background-color: var(--bs-body-bg);
+		li {
+			&:hover {
+				& > .contain-mega-menu__link {
+					background-color: var(--bs-primary-bg-subtle);
+				}
+			}
+		}
+	}
+	&__link {
+		padding: 0.5rem;
+		border-radius: $border-radius;
+		transition: $transition-base;
+		@include media-breakpoint-up(lg) {
+			padding: 0.75rem;
+			border-radius: $border-radius-lg;
+		}
+	}
+	&__img {
+		flex-shrink: 0;
+	}
+	&__title {
+		font-family: $font-family-monospace;
+		font-size: $font-size-sm;
+		color: var(--bs-body-color);
+		@include media-breakpoint-up(lg) {
+			font-weight: $font-weight-semibold;
+		}
+	}
+	&__description {
+		color: rgba(var(--bs-body-color-rgb), 0.65);
+		font-size: $font-size-xs;
+		@include media-breakpoint-up(lg) {
+			font-size: $font-size-sm;
+		}
+	}
+	.nav-link {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 0.25rem;
+		position: relative;
+		isolation: isolate;
+		&::after {
+			content: "\f107";
+			display: inline-block;
+			font-family: "Line Awesome Free";
+			font-weight: 900;
+			font-size: $font-size-xs;
+			line-height: 1;
+			font-variant: normal;
+			text-rendering: auto;
+			color: inherit;
+		}
+	}
+}

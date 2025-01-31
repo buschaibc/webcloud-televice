@@ -1,0 +1,14 @@
+@each $color, $value in $theme-colors {
+  .bg-soft-#{$color} {
+    background-color: rgba($value, .15);
+    color: $value;
+  }
+}
+
+.gradient-bg {
+  background: linear-gradient(90.12deg, #E90387 -29.31%, #FC6866 100.59%);
+}
+
+.gradient-bg-2 {
+  background: linear-gradient(262.24deg, #7154C6 9.78%, #301C70 91.63%);
+}

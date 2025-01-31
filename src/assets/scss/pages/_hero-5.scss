@@ -1,0 +1,26 @@
+.hero-5-area {
+    padding-top: clamp(9rem, 11.5vw + 1rem, 13.75rem);
+    padding-bottom: clamp(3.75rem, 6.3vw + 1rem, 7.5rem);
+    .hero-5-left {
+        top: 135px;
+        left: -170px;
+    }
+    .hero-5-right {
+        bottom: 0;
+        right: -70px; 
+        @media (max-width: 1500px) {
+            display: none;
+        }
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        inset: 0;
+        background-image: url(../img/shape/hero-5-bg-overlay.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
+        opacity: .1;
+    }
+}

@@ -1,0 +1,43 @@
+.cloud-package {
+	.accordion-item {
+		border: 0;
+		border-radius: 0.5rem !important;
+		box-shadow: 10px 10px 25px -5px rgba(0, 0, 0, 0.08);
+	}
+	.accordion-button {
+		&::after {
+			display: none;
+		}
+		&::before {
+			content: "\f067";
+			flex-shrink: 0;
+			font-family: "Line Awesome Free";
+			font-weight: 900;
+			display: inline-block;
+			font-size: 18px;
+			font-style: normal;
+			font-variant: normal;
+			text-rendering: auto;
+			line-height: 1;
+			margin-inline-end: 0.5rem;
+		}
+	}
+	.accordion-body {
+		padding-top: 0;
+	}
+	.accordion-button:not(.collapsed) {
+		color: var(--bs-accordion-btn-color);
+		background-color: var(--bs-accordion-btn-bg);
+		&::before {
+			content: "\f068";
+		}
+	}
+	.accordion-button {
+		border-radius: 0.5rem !important;
+	}
+	&__box {
+        padding: 1rem;
+		border: 1px dashed $border-color;
+		border-radius: 0.25rem;
+	}
+}

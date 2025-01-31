@@ -1,0 +1,21 @@
+.vertical-social-media {
+	@include media-breakpoint-up(xl) {
+		position: absolute;
+	}
+	&__text {
+		@include media-breakpoint-up(xl) {
+			writing-mode: vertical-rl;
+			text-orientation: mixed;
+		}
+		&-stroke {
+			display: inline-block;
+			width: 32px;
+			height: 2px;
+			background-color: $primary;
+			@include media-breakpoint-up(xl) {
+				width: 2px;
+				height: 32px;
+			}
+		}
+	}
+}

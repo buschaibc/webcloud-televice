@@ -1,0 +1,210 @@
+//
+// Buttons
+// --------------------------------------------------
+
+// Override solid buttons
+
+@each $color, $value in $theme-colors {
+	.btn-#{$color} {
+		&:hover,
+		&:active,
+		&:focus,
+		&.active,
+		&.show {
+			border-color: darken($value, 10%);
+			background-color: darken($value, 10%);
+		}
+	}
+}
+
+@each $color, $value in $theme-colors {
+	.btn-soft-#{$color} {
+		border-color: rgba($value, 0.15);
+		background-color: rgba($value, 0.15);
+		color: $value;
+		&:hover,
+		&:active,
+		&:focus,
+		&.active,
+		&.show {
+			border-color: $value;
+			background-color: $value;
+			color: $white !important;
+		}
+	}
+}
+
+.btn {
+	svg {
+		width: 18px;
+		height: 18px;
+	}
+}
+
+.btn-primary,
+.btn-success,
+.btn-accent,
+.btn-danger,
+.btn-warning,
+.btn-info,
+.btn-dark,
+.btn-grocery {
+	color: $btn-dark-color !important;
+}
+
+.btn-secondary {
+	border-color: $border-color;
+}
+.btn-light:hover,
+.btn-light:not(:disabled):not(.disabled):active,
+.btn-light:not(:disabled):not(.disabled).active,
+.btn-light:not(:disabled):not(.disabled).show {
+	border-color: $light;
+	background-color: $light;
+}
+
+// Outline buttons
+
+@each $color, $value in $theme-colors {
+	.btn-outline-#{$color} {
+		border-color: rgba($value, 0.35);
+	}
+}
+[class^="btn-outline-"],
+[class*=" btn-outline-"] {
+	&:hover,
+	&:active,
+	&.active,
+	&.show {
+		color: $btn-dark-color !important;
+	}
+}
+.btn-outline-light {
+	&:hover,
+	&:active,
+	&.active,
+	&.show {
+		color: $btn-light-color !important;
+	}
+}
+.btn-outline-secondary {
+	border-color: $gray-400;
+	&:hover,
+	&:active,
+	&.active,
+	&.show {
+		border-color: $gray-400 !important;
+		color: $btn-light-color !important;
+	}
+}
+
+@each $color, $value in $theme-colors {
+	@if $color != "secondary" or $color != "light" {
+		.btn-#{$color}.btn-shadow {
+			box-shadow: 0 0.5rem 1rem -0.35rem rgba($value, 0.5);
+		}
+	}
+}
+.btn-secondary,
+.btn-light {
+	&.btn-shadow {
+		box-shadow: 0 0.5rem 1rem rgb($black, 8%);
+		transition: $btn-transition;
+	}
+}
+
+.btn-shadow:hover {
+	box-shadow: none;
+}
+// Adding box-shadow to all solid buttons
+
+// Icon button
+.btn-icon {
+	flex-shrink: 0;
+	width: $btn-icon-size;
+	height: $btn-icon-size;
+	padding: 0;
+	svg {
+		width: 18px;
+		height: 18px;
+	}
+
+	&.btn-sm {
+		width: $btn-icon-sm-size;
+		height: $btn-icon-sm-size;
+		line-height: $btn-icon-sm-size;
+	}
+
+	&.btn-lg {
+		width: $btn-icon-lg-size;
+		height: $btn-icon-lg-size;
+		line-height: $btn-icon-lg-size;
+	}
+
+	&.btn-xl {
+		width: $btn-icon-xl-size;
+		height: $btn-icon-xl-size;
+		line-height: $btn-icon-xl-size;
+	}
+	span {
+		> i {
+			position: relative;
+			top: -3px;
+		}
+	}
+}
+
+//view details
+.tt-view-details {
+	svg {
+		width: 15px;
+		height: 15px;
+	}
+}
+
+// Arrow Btn
+.arrow-btn {
+	transform: rotate(-45deg);
+}
+.btn-link {
+	&:hover {
+		color: $primary !important;
+	}
+}
+.btn-arrow {
+	min-width: 190px;
+	&-sm {
+		min-width: 120px;
+	}
+	&-md {
+		min-width: 150px;
+	}
+	&-lg {
+		min-width: 170px;
+	}
+	&-xl {
+		min-width: 210px;
+	}
+	&:hover {
+		.btn-arrow__text {
+			padding-right: 20px;
+		}
+		.btn-arrow__icon {
+			opacity: 1;
+		}
+	}
+	&__text {
+		position: relative;
+		isolation: isolate;
+		transition: $transition-base;
+	}
+	&__icon {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		opacity: 0;
+		z-index: -1;
+		transition: $transition-base;
+	}
+}
