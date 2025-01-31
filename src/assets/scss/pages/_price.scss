@@ -1,0 +1,44 @@
+.price-card-item-one {
+    @media(max-width: 1199px) {
+        border-right: 0 !important;
+    }
+    &:hover {
+        .btn {
+            background-color: $primary;
+            border-color: $primary;
+        }
+    }
+}
+
+// Home Two
+.price-area-2 {
+    @media(max-width: 991px) {
+        background-color: $dark;
+    }
+    &::after {
+        position: absolute;
+        content: "";
+        inset: 0;
+        background-image: url(../img/shape/price-2-bg.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: top center;
+        z-index: -1;
+        @media(max-width: 991px) {
+            display: none;
+        }
+    }
+}
+
+.price-service-wrapper {
+    overflow: hidden;
+    max-height: 250px;
+    &.show {
+        max-height: 100%;
+    }
+}
+
+// Home Five
+.price-5-area {
+    margin-top: -90px;
+}

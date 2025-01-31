@@ -1,0 +1,21 @@
+.why-choose-card {
+	position: relative;
+	isolation: isolate;
+    overflow: hidden;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        background-color: transparent;
+        transition: all .3s ease;
+    }
+	&:hover {
+		box-shadow: 0 1rem 80px rgba(0, 0, 0, 0.1);
+        &::after {
+            background-color: $success;
+        }
+	}
+}

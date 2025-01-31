@@ -1,0 +1,38 @@
+.subtitle {
+	display: flex;
+	align-items: center;
+    gap: 1rem;
+	&__decoration {
+		display: flex;
+		align-items: center;
+	}
+	&__line {
+		width: 70px;
+		height: 2px;
+		background-color: $primary;
+	}
+	&__number {
+		position: relative;
+		isolation: isolate;
+		display: grid;
+		place-content: center;
+		width: 32px;
+		height: 32px;
+		border-radius: 3px;
+		color: $white;
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background-color: $primary;
+			border-radius: inherit;
+			transform: rotate(45deg);
+			z-index: -1;
+		}
+	}
+	&__text {
+		display: inline-block;
+		color: $primary;
+		font-weight: 600;
+	}
+}

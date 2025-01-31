@@ -1,0 +1,56 @@
+.blog-post-content {
+    margin-top: -95px;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(180deg, rgba(7, 15, 44, 0) 0%, #070F2C 45.4%);
+
+}
+
+.side-blog-item {
+    &:hover {
+        background-color: rgba($white, .05);
+        .arrow-btn {
+            transform: rotate(0);
+            background-color: $primary;
+            border-color: $primary !important;
+            opacity: 1 !important;
+            span {
+                color: $white !important;
+            }
+        }
+    }
+}
+
+// Home Two
+.side-blog-item {
+    &.style-two {
+        &:hover {
+            background-color: $white;
+            box-shadow: $box-shadow-sm;
+        }
+    }
+} 
+
+.blog-post-style-two {
+    img {
+        width: 496px;
+        height: 530px;
+        object-fit: cover;
+        @media(max-width: 1199px) {
+            width: 100%;
+            height: auto;
+            border-radius: 0 !important;
+        }
+    }
+    .blog-post-2-content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        @media(max-width: 1199px) {
+            border-radius: 0 !important;
+            width: 100%;
+            position: inherit;
+            transform: inherit;
+        }
+    }
+}

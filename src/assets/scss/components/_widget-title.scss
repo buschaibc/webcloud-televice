@@ -1,0 +1,15 @@
+.widget-title {
+	display: inline-block;
+	position: relative;
+	isolation: isolate;
+	margin-bottom: 1.5rem;
+	&::after {
+		content: "";
+		width: 100%;
+		position: absolute;
+		top: calc(100% + 0.25rem);
+		left: 0;
+		height: 2px;
+		background-color: $primary;
+	}
+}

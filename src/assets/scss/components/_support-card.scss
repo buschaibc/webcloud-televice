@@ -1,0 +1,10 @@
+.support-card {
+	background-color: rgba($white, 0.1);
+	border: 1px solid rgba($gray-500, 0.15);
+	border-radius: 0.75rem;
+	transition: all 0.3s ease;
+	&:hover {
+		background-color: $white;
+		box-shadow: 12px 20px 40px -5px rgba(0, 0, 0, 0.1);
+	}
+}

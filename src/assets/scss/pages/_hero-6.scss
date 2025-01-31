@@ -1,0 +1,27 @@
+.hero-6 {
+	padding-top: clamp(9rem, 13.15vw + 1rem, 15.625rem);
+	padding-bottom: clamp(9rem, 13.15vw + 1rem, 15.625rem);
+	overflow: hidden;
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -2;
+		pointer-events: none;
+		background-image: url(../img/shape/hero-6-bg.png);
+		background-position: center bottom;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+	&__img {
+		@media (min-width: 1920px) {
+			width: 950px;
+			position: relative;
+			z-index: -1;
+			transform: translate(-15%, 15%);
+			img {
+				width: 100%;
+			}
+		}
+	}
+}

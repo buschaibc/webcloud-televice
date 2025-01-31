@@ -1,0 +1,36 @@
+.hero-3 {
+	padding-top: clamp(9rem, 11.5vw + 1rem, 13.75rem);
+	padding-bottom: clamp(3.75rem, 6.3vw + 1rem, 7.5rem);
+	&__shape {
+		display: none;
+		@include media-breakpoint-up(xl) {
+			display: block;
+			position: absolute;
+			z-index: -1;
+			pointer-events: none;
+			&-1 {
+				top: 130px;
+				right: 40px;
+			}
+			&-2 {
+				bottom: 80px;
+				left: 40%;
+			}
+			&-3 {
+				bottom: 10px;
+				right: 40px;
+			}
+			&-4 {
+				bottom: 10px;
+				left: 40px;
+			}
+		}
+	}
+	.vertical-social-media {
+		@include media-breakpoint-up(xl) {
+			top: 50%;
+			right: 2rem;
+			transform: translateY(-50%);
+		}
+	}
+}

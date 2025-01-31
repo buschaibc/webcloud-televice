@@ -1,0 +1,135 @@
+.hero-1 {
+	padding-top: clamp(9rem, 11.5vw + 1rem, 12rem);
+	padding-bottom: clamp(9rem, 11.5vw + 1rem, 12rem);
+	-webkit-mask-image: url(../img/shape/hero-1-shape.svg);
+	mask-image: url(../img/shape/hero-1-shape.svg);
+	mask-size: cover;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	mask-position: center bottom;
+	&__map {
+		display: inline-block;
+		position: relative;
+		@media (min-width: 1920px) {
+			width: 830px;
+			bottom: -32px;
+		}
+		&-location {
+			display: none;
+			position: absolute;
+			z-index: 1;
+			@include media-breakpoint-up(md) {
+				display: inline-block;
+			}
+			&:hover {
+				.hero-1__map-location-info {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+			&.active {
+				.hero-1__map-location-info {
+					visibility: visible;
+					opacity: 1;
+				}
+			}
+			&-dot {
+				width: 14px;
+				height: 14px;
+				position: relative;
+				border-radius: 50%;
+				background-color: $primary;
+
+				&::after {
+					content: "";
+					position: absolute;
+					inset: 0;
+					border-radius: 50%;
+					background-color: rgba($primary, 0.2);
+					animation: pulser 2s infinite;
+					z-index: 1;
+				}
+			}
+			&-info {
+				display: flex;
+				align-items: start;
+				position: absolute;
+				bottom: 100%;
+				right: 100%;
+				transform: translateX(-35%);
+				visibility: hidden;
+				opacity: 0;
+				transition: $transition-base;
+				&-btn {
+					display: inline-flex;
+					align-items: center;
+					gap: 4px;
+					padding: 6px;
+					border-radius: 1.5rem;
+					background-color: $white;
+					flex-shrink: 0;
+					&-img {
+						flex-shrink: 0;
+						width: 28px;
+						height: 28px;
+						border-radius: 50%;
+					}
+					&-text {
+						min-width: max-content;
+						display: inline-block;
+						font-size: 14px;
+						font-weight: 500;
+					}
+				}
+				&-arrow {
+					display: inline-block;
+					margin-top: 20px;
+					flex-shrink: 0;
+				}
+			}
+			&--1 {
+				top: 36%;
+				right: 49%;
+			}
+			&--2 {
+				top: 45%;
+				right: 82%;
+			}
+			&--3 {
+				top: 53%;
+				right: 76%;
+			}
+			&--4 {
+				top: 33%;
+				right: 13%;
+			}
+			&--5 {
+				top: 44%;
+				right: 28%;
+			}
+			&--6 {
+				top: 53%;
+				right: 40%;
+			}
+			&--7 {
+				top: 63%;
+				right: 47%;
+			}
+			&--8 {
+				top: 81%;
+				right: 15%;
+			}
+		}
+	}
+}
+@keyframes pulser {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(2);
+	}
+	100% {
+		transform: scale(1);
+	}
+}

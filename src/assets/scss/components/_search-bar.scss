@@ -1,0 +1,38 @@
+.search-bar {
+	display: flex;
+	background-color: rgba($gray-500, 0.1);
+	border-radius: 3rem;
+	&__content {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		flex-grow: 1;
+		border: 1px solid rgba($gray-500, 0.1);
+		border-start-start-radius: 3rem;
+		border-end-start-radius: 3rem;
+	}
+	&__icon {
+		padding-inline-start: 1rem;
+		font-size: 16px;
+	}
+	&__input {
+		padding: 0.5rem 1rem 0.5rem 0.5rem;
+		border: 0;
+		border-radius: 0;
+		background-color: transparent;
+		font-size: 14px;
+		line-height: 1.572;
+		&:focus {
+			background-color: transparent;
+            box-shadow: none;
+		}
+	}
+	&__btn {
+		padding: 0.5rem 1rem;
+		border: 0;
+		border-start-end-radius: 3rem;
+		border-end-end-radius: 3rem;
+		background-color: $primary;
+		color: $white;
+	}
+}

@@ -1,0 +1,71 @@
+.banner {
+	padding-top: clamp(9rem, 11.5vw + 1rem, 15rem);
+	padding-bottom: clamp(9rem, 11.5vw + 1rem, 15rem);
+	&-security {
+		-webkit-mask-image: url(../img/shape/banner-shape-security.png);
+		mask-image: url(../img/shape/banner-shape-security.png);
+		mask-size: 100% 100%;
+		-webkit-mask-repeat: no-repeat;
+		mask-repeat: no-repeat;
+		mask-position: center bottom;
+	}
+}
+.banner-bg {
+	padding-top: clamp(9rem, 11.5vw + 1rem, 13.75rem);
+	padding-bottom: clamp(3.75rem, 6.5vw + 1rem, 9rem);
+	background-image: url(../img/shape/shape-sqr.png);
+	background-repeat: repeat;
+	background-position: center;
+	background-size: initial;
+	&.server-banner {
+		padding-bottom: 250px;
+		mask-image: url(../img/shape/server-banner-bg.png);
+		mask-repeat: no-repeat;
+		mask-size: 100% 100%;
+		mask-position: center bottom;
+	}
+	&.control-panel-banner {
+		mask-image: url(../img/shape/control-panel-bg.png);
+		mask-repeat: no-repeat;
+		mask-size: 100% 100%;
+		mask-position: center bottom;
+	}
+	&.ssl-banner {
+		background-image: url(../img/shape/ssl-map.png);
+		background-repeat: no-repeat;
+		background-position: right center;
+		background-size: contain;
+		mask-image: url(../img/shape/ssl-bg.png);
+		mask-repeat: no-repeat;
+		mask-size: 100% 100%;
+		mask-position: center bottom;
+		@media (max-width: 1199px) {
+			mask-image: none;
+		}
+	}
+	&.price-banner {
+		padding-bottom: 150px;
+	}
+	&.ddos-banner {
+		padding-bottom: 250px;
+		mask-image: url(../img/shape/ddos-bg.png);
+		mask-repeat: no-repeat;
+		mask-size: 100% 100%;
+		mask-position: center bottom;
+		@media (max-width: 767px) {
+			padding-bottom: 200px;
+		}
+	}
+}
+.operating-system {
+	background-image: url(../img/shape/operating-system-bg.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: cover;
+}
+.premium-network {
+	background-image: url(../img/shape/pre-net-bg.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: cover;
+}

@@ -1,0 +1,34 @@
+.why-choose-section {
+	position: relative;
+	isolation: isolate;
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		background-image: url(../img/shape/cloud-hero-line.png);
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		pointer-events: none;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: -2;
+		background-image: linear-gradient(253deg, #0a00e9 5.74%, #00165b 102.24%);
+		pointer-events: none;
+		@include media-breakpoint-up(lg) {
+			-webkit-mask-image: url(../img/shape/why-choose-bg-shape.png);
+			mask-image: url(../img/shape/why-choose-bg-shape.png);
+			mask-size: 100% 100%;
+			-webkit-mask-repeat: no-repeat;
+			mask-repeat: no-repeat;
+			mask-position: center;
+		}
+	}
+}

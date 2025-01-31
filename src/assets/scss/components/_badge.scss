@@ -1,0 +1,18 @@
+.discount-badge {
+    text-align: center;
+    width: 216px;
+    padding-block: 5px;
+    position: absolute;
+    top: 15px;
+    right: -48px;
+    transform: rotate(27deg);
+}
+
+// Home Domain
+.step-badge {
+    position: absolute;
+    padding: 5px 20px;
+    top: -15px;
+    right: 25px;
+    clip-path: polygon(0 0, 83% 0, 100% 50%, 81% 100%, 0 100%, 15% 49%);
+}

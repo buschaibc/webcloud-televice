@@ -1,0 +1,25 @@
+.accordion-table-pricing {
+	--bs-accordion-btn-padding-x: 1rem;
+	--bs-accordion-btn-padding-y: 0.75rem;
+	--bs-accordion-border-width: 0;
+	--bs-accordion-bg: var(--bs-primary-bg-subtle);
+	--bs-accordion-btn-bg: var(--bs-primary-bg-subtle);
+	--bs-accordion-active-color: var(--bs-body-color);
+	--bs-accordion-btn-icon-width: 0.875rem;
+	.accordion-button::after {
+		display: none;
+	}
+	.accordion-button::before {
+		-ms-flex-negative: 0;
+		flex-shrink: 0;
+		width: var(--bs-accordion-btn-icon-width);
+		height: var(--bs-accordion-btn-icon-width);
+		margin-right: 0.5rem;
+		content: "";
+		background-image: var(--bs-accordion-btn-icon);
+		background-repeat: no-repeat;
+		background-size: var(--bs-accordion-btn-icon-width);
+		-webkit-transition: var(--bs-accordion-btn-icon-transition);
+		transition: var(--bs-accordion-btn-icon-transition);
+	}
+}

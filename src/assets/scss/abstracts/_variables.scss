@@ -1,0 +1,321 @@
+//
+// Variables
+// --------------------------------------------------
+
+// Gray and brand colors to use across the Theme.
+
+// Grayscale
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #090911 !default;
+$black: #000 !default;
+
+// Brand colors
+$primary: #1062fe !default;
+$secondary: #f1f5f9 !default;
+$success: #07c07e !default;
+$info: #24e1e4 !default;
+$warning: #ffa42f !default;
+$danger: #fd3246 !default;
+$light: $gray-100 !default;
+$dark: #080f2c !default;
+$dark-22: #111 !default;
+$warning-2:#FFFBEF !default;
+$gray-cus: #272a2f;
+.bg-warning-2 {
+	background-color: $warning-2;
+}
+.gray-cus {
+	background-color: $gray-cus;
+}
+.dark-bg-22 {
+	background-color: $dark-22;
+}
+
+// scss-docs-start theme-text-variables
+$primary-text-emphasis: shade-color($primary, 20%) !default;
+$secondary-text-emphasis: shade-color($secondary, 20%) !default;
+$success-text-emphasis: shade-color($success, 20%) !default;
+$info-text-emphasis: shade-color($info, 20%) !default;
+$warning-text-emphasis: shade-color($warning, 20%) !default;
+$danger-text-emphasis: shade-color($danger, 20%) !default;
+// scss-docs-end theme-text-variables
+
+// scss-docs-start theme-bg-subtle-variables
+$primary-bg-subtle: tint-color($primary, 85%) !default;
+$secondary-bg-subtle: tint-color($secondary, 80%) !default;
+$success-bg-subtle: tint-color($success, 85%) !default;
+$info-bg-subtle: tint-color($info, 85%) !default;
+$warning-bg-subtle: tint-color($warning, 85%) !default;
+$danger-bg-subtle: tint-color($danger, 85%) !default;
+// scss-docs-end theme-bg-subtle-variables
+
+// Adding new color to default Bootstrap's $theme-colors map
+$theme-colors: (
+	"primary": $primary,
+	"secondary": $secondary,
+	"success": $success,
+	"info": $info,
+	"warning": $warning,
+	"danger": $danger,
+	"light": $light,
+	"dark": $dark,
+) !default;
+
+// Social brand colors
+$facebook: #3b5999;
+$twitter: #1da1f2;
+$google: #dd4b39;
+$instagram: #e4405f;
+$pinterest: #bd081c;
+$youtube: #cd201f;
+$slack: #3aaf85;
+$dribbble: #ea4c89;
+$github: #222222;
+$dropbox: #1e90ff;
+$twitch: #4b367c;
+$paypal: #ecb32c;
+$behance: #0057ff;
+$reddit: #e84422;
+
+$brand-colors: ();
+$brand-colors: map-merge(
+	(
+		"facebook": $facebook,
+		"twitter": $twitter,
+		"google": $google,
+		"instagram": $instagram,
+		"pinterest": $pinterest,
+		"youtube": $youtube,
+		"slack": $slack,
+		"dribbble": $dribbble,
+		"dropbox": $dropbox,
+		"twitch": $twitch,
+		"paypal": $paypal,
+		"behance": $behance,
+		"reddit": $reddit,
+		"github": $github,
+	),
+	$brand-colors
+);
+
+// Options
+//
+// Modifying Bootstrap global options
+
+$enable-shadows: false !default;
+$enable-negative-margins: true !default;
+
+// Spacing
+$spacer: 1rem !default;
+$spacers: (
+	0: 0,
+	1: $spacer * 0.25,
+	2: $spacer * 0.5,
+	3: $spacer * 0.75,
+	4: $spacer,
+	5: $spacer * 1.25,
+	6: $spacer * 1.5,
+	7: $spacer * 1.75,
+	8: $spacer * 2,
+	9: $spacer * 2.25,
+	10: $spacer * 2.5,
+	11: $spacer * 2.75,
+	12: $spacer * 3,
+	13: $spacer * 3.25,
+	14: $spacer * 3.5,
+	15: $spacer * 3.75,
+	16: $spacer * 4,
+	17: $spacer * 4.25,
+	18: $spacer * 4.5,
+	19: $spacer * 4.75,
+	20: $spacer * 5,
+	21: $spacer * 5.25,
+	22: $spacer * 5.5,
+	23: $spacer * 5.75,
+	24: $spacer * 6,
+	25: $spacer * 6.25,
+	26: $spacer * 6.5,
+	27: $spacer * 6.75,
+	28: $spacer * 7,
+	29: $spacer * 7.25,
+	30: $spacer * 7.5,
+) !default;
+
+// scss-docs-start position-map
+$position-values: (
+	0: 0,
+	1: 0.25rem,
+	2: 0.5rem,
+	3: 0.75rem,
+	4: 1rem,
+	5: 1.25rem,
+	6: 1.5rem,
+	7: 1.75rem,
+	8: 2rem,
+	9: 2.25rem,
+	10: 2.5rem,
+	11: 2.75rem,
+	12: 3rem,
+	13: 3.25rem,
+	14: 3.5rem,
+	15: 3.75rem,
+	16: 4rem,
+	17: 4.25rem,
+	18: 4.5rem,
+	19: 4.75rem,
+	20: 5rem,
+	21: 5.25rem,
+	22: 5.5rem,
+	23: 5.75rem,
+	24: 6rem,
+	25: 6.25rem,
+	26: 6.5rem,
+	27: 6.75rem,
+	28: 7rem,
+	29: 7.25rem,
+	30: 7.5rem,
+	50: 50%,
+	100: 100%,
+) !default;
+// scss-docs-end position-map
+
+$grid-gutter-width: 1.5rem;
+$gutters: (
+	0: 0,
+	1: $spacer * 0.25,
+	2: $spacer * 0.5,
+	3: $spacer,
+	4: $spacer * 1.5,
+	5: $spacer * 3,
+);
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
+);
+
+// Body
+$body-color: #49495f !default;
+
+//transition
+$transition-base: all 0.3s ease-in-out !default;
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns: 12 !default;
+$grid-gutter-width: 1.5rem !default;
+$grid-row-columns: 6 !default;
+
+// Container padding
+
+$container-padding-x: $grid-gutter-width !default;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+
+// scss-docs-start border-radius-variables
+$border-radius: 0.25rem !default;
+$border-radius-sm: 0.25rem !default;
+$border-radius-lg: 0.5rem !default;
+$border-radius-xl: 0.75rem !default;
+$border-radius-xxl: 1rem !default;
+$border-radius-pill: 50rem !default;
+// scss-docs-end border-radius-variables
+
+$border-color-translucent: rgba($black, 0.08) !default;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$path-to-fonts: "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap" !default;
+
+$font-family-sans-serif: "Public Sans", sans-serif !default;
+$font-family-monospace: "Plus Jakarta Sans", sans-serif !default;
+
+$font-size-base: 1rem !default;
+$font-size-xl: ($font-size-base * 1.5) !default;
+$font-size-lg: $font-size-base * 1.25 !default;
+$font-size-md: ($font-size-base * 1.125) !default;
+$font-size-sm: $font-size-base * 0.875 !default;
+$font-size-xs: ($font-size-base * 0.75) !default;
+
+$h1-font-size: $font-size-base * 3.815 !default; //61.04px
+$h2-font-size: $font-size-base * 3.052 !default; //48.83px
+$h3-font-size: $font-size-base * 2.441 !default; //39.06px
+$h4-font-size: $font-size-base * 1.953 !default; //31.25px
+$h5-font-size: $font-size-base * 1.563 !default; //25px
+$h6-font-size: $font-size-base * 1.25 !default; //20px
+
+// scss-docs-start headings-variables
+$headings-font-family: $font-family-monospace !default;
+$headings-font-weight: 900 !default;
+$headings-color: $dark !default;
+// scss-docs-end headings-variables
+
+// Icons
+$icons-font-family: "Line Awesome Free" !default;
+$icons-font-path: "../fonts" !default;
+
+// Tables
+$table-cell-vertical-align: middle !default;
+
+// Custom scrollbar
+$scrollbar-width: 0.1875rem !default;
+$scrollbar-bg: $gray-500 !default;
+$scrollbar-track-bg: darken($gray-200, 3%) !default;
+
+//Form label variable
+$form-label-margin-bottom: 0.25rem !default;
+$form-label-font-size: $font-size-md !default;
+
+// Buttons + Forms
+$input-btn-padding-y: 0.625rem !default;
+$input-btn-padding-x: 1rem !default;
+$input-btn-padding-y-sm: 0.425rem !default;
+$input-btn-padding-x-sm: 0.75rem !default;
+$input-btn-padding-y-lg: 0.75rem !default;
+$input-btn-padding-x-lg: 1.25rem !default;
+$input-btn-focus-width: 0 !default;
+
+$input-btn-font-size: ($font-size-base * 0.9375) !default;
+$input-btn-font-size-sm: ($font-size-base * 0.8125) !default;
+$input-btn-font-size-lg: ($font-size-base * 1.0625) !default;
+
+// Buttons
+$btn-font-family: $font-family-monospace !default;
+$btn-padding-x: 1.125rem !default;
+$btn-padding-x-sm: 1rem !default;
+$btn-padding-x-lg: 1.5rem !default;
+$btn-white-space: nowrap !default;
+
+$btn-dark-color: $white !default;
+$btn-light-color: $gray-700 !default;
+$btn-font-weight: normal !default;
+$btn-box-shadow: unset !default;
+
+$btn-icon-size: 2.75rem !default;
+$btn-icon-sm-size: 2.25rem !default;
+$btn-icon-lg-size: 3.25rem !default;
+$btn-icon-xl-size: 4.55rem !default;
+
+$btn-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, border-color 0.25s ease-in-out,
+	box-shadow 0.2s ease-in-out !default;
+
+$btn-focus-box-shadow: unset !default;
+$btn-active-box-shadow: unset !default;

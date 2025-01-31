@@ -1,0 +1,14 @@
+.popular-price-card {
+    position: relative;
+    isolation: isolate;
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url(../img/shape/price-shape.png);
+        background-position: start center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+}

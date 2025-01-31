@@ -1,0 +1,19 @@
+.partner-area {
+    &::after {
+        position: absolute;
+        content: "";
+        inset: 0;
+        background-image: url(../img/shape/partner-bg-overlay.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        z-index: -1;
+        opacity: .1;
+    }
+}
+
+.tech-partner {
+    &:hover {
+        box-shadow: $box-shadow !important;
+    }
+}

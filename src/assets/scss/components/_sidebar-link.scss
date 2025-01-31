@@ -1,0 +1,16 @@
+.sidebar-link {
+	&:hover {
+		a {
+			color: $primary !important;
+		}
+		span {
+			background-color: $primary !important;
+			color: $white !important;
+		}
+	}
+	span {
+		transition: $transition-base;
+        font-size: 14px;
+        line-height: 1;
+	}
+}

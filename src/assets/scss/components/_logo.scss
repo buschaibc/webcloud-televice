@@ -1,0 +1,25 @@
+.logo {
+	--logo-height: 36px;
+	height: var(--logo-height);
+	display: flex;
+	flex-shrink: 0;
+	&__img {
+		max-width: 100%;
+		max-height: 100%;
+		object-fit: contain;
+		&-dark {
+			display: none;
+		}
+	}
+	&__sticky {
+		display: none;
+	}
+}
+[data-bs-theme="dark"] {
+	.logo__img-dark {
+		display: inline-block;
+	}
+	.logo__img-light {
+		display: none;
+	}
+}

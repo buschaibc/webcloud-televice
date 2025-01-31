@@ -1,0 +1,23 @@
+.footer-cta {
+    position: relative;
+    isolation: isolate;
+    margin-bottom: -1px;
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background-color: rgba($dark, .4);
+        clip-path: polygon(0 47%, 100% 100%, 100% 100%, 0% 100%);
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background-color: $dark;
+        clip-path: polygon(0 70%, 100% 5%, 100% 100%, 0% 100%);
+    }
+}

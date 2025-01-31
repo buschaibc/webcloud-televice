@@ -1,0 +1,14 @@
+.about-banner {
+    padding-top: clamp(9rem,11.5vw + 1rem,13.75rem);
+    background-image: url(../img/shape/shape-sqr.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: initial;
+    &__img {
+        @media (min-width: 1920px) {
+            position: relative;
+            margin-bottom: -180px;
+            transform: translateX(80px);
+        }
+    }
+}

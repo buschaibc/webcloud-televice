@@ -1,0 +1,34 @@
+.game-card {
+	position: relative;
+	isolation: isolate;
+	&:hover {
+		.game-card__btn {
+			visibility: visible;
+			opacity: 1;
+			pointer-events: unset;
+		}
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 1.25rem;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-image: url(../img/shape/game-card-bg-shape.svg);
+		background-size: 100% 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		z-index: -1;
+	}
+    &__label {
+        top: 0;
+        right: -24px;
+        transform: rotate(45deg) translateX(36px);
+    }
+	&__btn {
+		visibility: hidden;
+		opacity: 0;
+		pointer-events: none;
+	}
+}

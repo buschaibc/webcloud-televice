@@ -1,0 +1,12 @@
+.server-location-section {
+	margin-top: -50px;
+	position: relative;
+	z-index: 1;
+	background-color: #e7efff;
+	-webkit-mask-image: url(../img/shape/server-location-shape.png);
+	mask-image: url(../img/shape/server-location-shape.png);
+	mask-size: 100% 100%;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	mask-position: center;
+}

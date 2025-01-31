@@ -1,0 +1,165 @@
+.navbar {
+	--bs-navbar-toggler-padding-x: 0.35rem;
+	@include media-breakpoint-up(lg) {
+		--bs-navbar-padding-y: 0;
+	}
+	.nav-link {
+		--bs-nav-link-font-size: 14px;
+	}
+	&-1 {
+		z-index: 99;
+		background-color: $dark;
+		@include media-breakpoint-up(lg) {
+			background-color: transparent;
+		}
+		.navbar-nav {
+			@include media-breakpoint-up(lg) {
+				--bs-nav-link-padding-y: 1.25rem;
+			}
+		}
+		.nav-link {
+			color: $gray-100;
+			&.active {
+				color: $primary;
+			}
+		}
+	}
+	&-2 {
+		z-index: 99;
+		.navbar-nav {
+			@include media-breakpoint-up(lg) {
+				--bs-nav-link-padding-y: 1.25rem;
+			}
+		}
+		.nav-link {
+			&.active {
+				color: $primary;
+			}
+		}
+	}
+	&-2-container {
+		position: relative;
+		isolation: isolate;
+		&::after {
+			@include media-breakpoint-up(lg) {
+				content: "";
+				position: absolute;
+				inset-block: 0;
+				inset-inline-start: 0;
+				inset-inline-end: 80%;
+				background-color: $success;
+				clip-path: polygon(81% 0, 100% 59%, 89% 100%, 0 100%, 0 0);
+				z-index: -1;
+			}
+			@include media-breakpoint-up(xl) {
+				inset-inline-end: 75%;
+				clip-path: polygon(92% 0, 100% 59%, 95% 100%, 0 100%, 0 0);
+			}
+			@include media-breakpoint-up(xxl) {
+				inset-inline-end: 80%;
+				clip-path: polygon(92% 0, 100% 59%, 95% 100%, 0 100%, 0 0);
+			}
+			@media (min-width: 1920px) {
+				inset-inline-end: 67%;
+				clip-path: polygon(95% 0, 100% 59%, 96% 100%, 0 100%, 0 0);
+			}
+		}
+	}
+	&-box {
+		--bs-navbar-padding-y: 0;
+			box-shadow: $box-shadow-sm;
+		& > .container {
+			
+			@include media-breakpoint-up(lg) {
+				padding-block: 0;
+			}
+		}
+		.navbar-nav {
+			@include media-breakpoint-up(lg) {
+				--bs-nav-link-padding-y: 1.25rem;
+			}
+		}
+	}
+	&-sticky {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		z-index: 99;
+		transform: translateY(-100%);
+		opacity: 0;
+		pointer-events: none;
+		transition: $transition-base;
+		.navbar-nav {
+			@include media-breakpoint-up(lg) {
+				--bs-nav-link-padding-y: 1.25rem;
+			}
+		}
+	}
+	&-overlay {
+		position: fixed;
+		top: 0;
+		z-index: 98;
+		width: 100%;
+		transition: $transition-base;
+	}
+	&-toggler-icon {
+		width: 1.25em;
+		height: 1.25em;
+	}
+	&-top-toggle {
+		.navbar-top {
+			display: none;
+		}
+	}
+}
+
+.navbar-1 {
+	.nav-link {
+		color: $white;
+		opacity: 0.8;
+		&.active {
+			color: $white;
+			opacity: 1;
+		}
+	}
+}
+
+.navbar-sticky-init {
+	.navbar-overlay {
+		background-color: $secondary-bg-subtle !important;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	}
+	.navbar {
+		.logo__img {
+			display: none;
+		}
+		.logo__sticky {
+			display: block;
+		}
+	}
+	.navbar-1 {
+		background-color: transparent;
+		.nav-link {
+			color: $gray-800;
+			&.active {
+				color: $primary;
+			}
+		}
+	}
+	.navbar-box {
+		.container {
+			box-shadow: none;
+		}
+	}
+}
+
+
+.navbar-1.style-2 {
+	@media(max-width: 991px) {
+		background-color: transparent;
+	}
+	.nav-link {
+		color: $dark;
+	}
+}

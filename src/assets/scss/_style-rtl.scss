@@ -1,0 +1,164 @@
+.promo-text {
+	@media (min-width: 768px) {
+		text-align: right !important;
+	}
+}
+
+.hero-1__map-location-info {
+	flex-flow: row-reverse;
+}
+
+.data-center__tooltip {
+	flex-flow: row-reverse;
+}
+
+.toggle-switch input,
+.toggle-switch .form-check-input {
+	margin-right: 0;
+}
+
+.discount-badge {
+	top: 24px;
+	right: auto;
+	left: -48px;
+	transform: rotate(318deg);
+}
+
+.domain-submit-box {
+	left: 6px;
+	right: auto;
+}
+
+@media (min-width: 992px) {
+	.navbar-nav {
+		margin-right: auto !important;
+		margin-left: 0 !important;
+	}
+}
+
+@media (min-width: 992px) {
+	.text-lg-end {
+		text-align: left !important;
+	}
+}
+
+.hero-2-pluse-img {
+	margin-left: 33px;
+	margin-right: auto;
+}
+
+.text-start {
+	text-align: right !important;
+}
+
+.accordion-button::after {
+	margin-left: 0;
+}
+
+@media (min-width: 992px) {
+	.why-service-item::after {
+		left: 0;
+		right: auto;
+	}
+}
+
+@media (min-width: 1200px) {
+	.hero-7__shape-1 {
+		left: auto;
+		right: 0;
+		transform: translateX(50%);
+	}
+}
+
+.navbar-2-container::after {
+	display: none;
+}
+
+@media (min-width: 992px) {
+	.footer-5::after {
+		transform: scaleX(-1);
+	}
+}
+
+@media (min-width: 992px) {
+	.cloud-hero::after {
+		transform: scaleX(-1);
+	}
+}
+
+@media (min-width: 992px) {
+	.cloud-hero__brand {
+		position: absolute;
+		right: auto;
+		left: 0;
+	}
+}
+
+@media (min-width: 992px) {
+	.footer-5::after {
+		right: 0;
+		left: 1%;
+	}
+}
+
+@media (min-width: 1200px) {
+	.footer-5::after {
+		left: 3%;
+	}
+}
+
+.footer-cta {
+	img.position-absolute {
+		display: none !important;
+	}
+}
+
+.vertical-social-media {
+	display: none !important;
+}
+
+.hero-5-area .hero-5-left {
+	top: 135px;
+	right: -170px;
+	left: auto;
+}
+
+.hero-8 .hero-img {
+	margin-left: 0;
+	margin-right: -175px;
+}
+
+.hero-8 .shape-1 {
+	right: unset;
+	left: 220px;
+}
+
+.hero-two-img-group .hero-2-left {
+	display: none;
+}
+
+.accordion-button::after {
+	margin-right: auto;
+}
+
+@media (min-width: 1200px) {
+	.partner-section-3__container::after {
+		right: 84%;
+		left: 0;
+	}
+
+	.partner-section-3__shape {
+		right: 70%;
+		left: auto;
+	}
+}
+
+ul {
+	padding-right: 0;
+}
+
+.home-9-hero {
+	.text-end {
+		text-align: left !important;
+	}
+}

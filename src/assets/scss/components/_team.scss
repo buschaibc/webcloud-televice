@@ -1,0 +1,54 @@
+.team {
+	position: relative;
+	z-index: 1;
+	&__content {
+		position: absolute;
+		inset: 0;
+	}
+	&__social {
+		padding: 4px;
+		background-color: $white;
+		border-radius: 2rem;
+		&:hover {
+			.team__social-list {
+				max-height: max-content;
+				overflow: unset;
+			}
+		}
+	}
+	&__btn-expand {
+		display: grid;
+		place-content: center;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background-color: $primary;
+		border: none;
+		color: $white;
+		font-size: 20px;
+	}
+	&__social-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		max-height: 0;
+		overflow: hidden;
+		transition: $transition-base;
+	}
+	&__social-link {
+		display: grid;
+		place-content: center;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		border: none;
+		color: $headings-color;
+		font-size: 20px;
+		text-decoration: none;
+		transition: $transition-base;
+		text-decoration: none;
+		&:hover {
+			background-color: $secondary;
+		}
+	}
+}

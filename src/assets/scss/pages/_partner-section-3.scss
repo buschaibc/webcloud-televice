@@ -1,0 +1,60 @@
+.partner-section-3 {
+    @include media-breakpoint-up(xl) {
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-image: url(../img/map-left.png);
+            background-position: left center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: -1;
+            pointer-events: none;
+        }
+    }
+	&__vertical-text {
+		@include media-breakpoint-up(xl) {
+			writing-mode: vertical-rl;
+			text-orientation: mixed;
+		}
+	}
+	&__container {
+		@include media-breakpoint-up(xl) {
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 84%;
+				width: 100%;
+				background-image: url(../img/map-right.png);
+				background-position: 10% center;
+				background-size: contain;
+				background-repeat: no-repeat;
+				background-color: $primary;
+				z-index: -1;
+				pointer-events: none;
+			}
+		}
+		@media (min-width: 1920px) {
+			&::after {
+                background-position: 55% center;
+            }
+		}
+	}
+    &__shape {
+        display: none;
+        @include media-breakpoint-up(xl) {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 70%;
+            transform: translateY(-50%);
+            z-index: -1;
+            pointer-events: none;
+        }
+    }
+}

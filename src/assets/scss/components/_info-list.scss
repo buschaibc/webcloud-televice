@@ -1,0 +1,57 @@
+.info-list {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	@include media-breakpoint-up(md) {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	li {
+		@include media-breakpoint-up(md) {
+			width: calc(50% - 1rem);
+		}
+		@include media-breakpoint-up(lg) {
+			width: calc(33.33% - 0.67rem);
+		}
+		@include media-breakpoint-up(xl) {
+			padding: 0.5rem;
+		}
+		& + li {
+			@include media-breakpoint-up(lg) {
+				position: relative;
+				isolation: isolate;
+				&::before {
+					content: "";
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					right: calc(100% + 0.5rem);
+                    transform: translateX(50%);
+					width: 2px;
+					background-color: $border-color;
+                    z-index: -1;
+                    pointer-events: none;
+                    @include media-breakpoint-up(xl) {
+                        right: calc(100% + 0.25rem);
+                    }
+				}
+				&::after {
+					content: "";
+					position: absolute;
+					top: 0;
+					right: calc(100% + 0.5rem);
+                    transform: translateX(50%);
+					width: 4px;
+                    height: 40px;
+					background-color: $primary;
+                    z-index: -1;
+                    pointer-events: none;
+                    @include media-breakpoint-up(xl) {
+                        right: calc(100% + 0.25rem);
+                    }
+				}
+			}
+		}
+	}
+}

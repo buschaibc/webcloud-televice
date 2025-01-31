@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+// Import Google Fonts
+@import url($path-to-fonts);
+
+html * {
+  @include font-smoothing;
+}
+
+a {
+  transition: $transition-base;
+}
+
+

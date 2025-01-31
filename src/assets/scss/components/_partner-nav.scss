@@ -1,0 +1,6 @@
+.partner-tab-nev {
+    &.active {
+        color: $primary !important;
+        border-bottom: 1px solid $primary !important;
+    }
+}
