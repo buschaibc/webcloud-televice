@@ -1,0 +1,15 @@
+{
+    "name": "televice/business-verification",
+    "description": "Televice Business Verification e-KYC system",
+    "type": "project",
+    "require": {
+        "php": "^8.2",
+        "setasign/fpdi": "^2.4",
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Televice\\": "src/"
+        }
+    }
+}
