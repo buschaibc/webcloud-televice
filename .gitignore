@@ -1,0 +1,7 @@
+/vendor/
+/storage/secure/*
+/storage/public/*
+/uploads/*
+!/storage/secure/.gitkeep
+!/storage/public/.gitkeep
+!/uploads/.gitkeep
